@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>深零科模 · PrismZero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="PrismZeroTechModel-css.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-particles"></div>
+
+    <!-- 固定导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">🌐 深零科模</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#business" class="nav-link">业务</a></li>
+                <li><a href="#departments" class="nav-link">部门</a></li>
+                <li><a href="#philosophy" class="nav-link">理念</a></li>
+                <li><a href="#location" class="nav-link">地点</a></li>
+            </ul>
+            <!-- 返回深零系统总站 -->
+            <a href="../PrismZeroSystemWebsite/system.html" style="
+                background: rgba(59,130,246,0.2);
+                border: 1px solid rgba(100,160,255,0.4);
+                color: #b0c7e9;
+                padding: 0.4rem 1.2rem;
+                border-radius: 40px;
+                font-size: 0.85rem;
+                text-decoration: none;
+                transition: background 0.2s;
+                white-space: nowrap;
+            " onmouseover="this.style.background='rgba(59,130,246,0.4)'" onmouseout="this.style.background='rgba(59,130,246,0.2)'">
+                ← 深零系统
+            </a>
+            <!-- 移动端汉堡按钮占位（后续可扩展） -->
+            <div class="nav-toggle" id="navToggle" style="display: none;">☰</div>
+        </div>
+    </nav>
+
+    <div class="nav-dots" id="navDots"></div>
+
+    <!-- 第一屏：主视觉 (id="home") -->
+    <section id="home">
+        <div class="container">
+            <h1>深零科模</h1>
+            <div class="subhead">PrismZero TechModel · 从零，向深</div>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <span class="location-pill">🔐 零信任架构</span>
+                <span class="location-pill">🧊 数字孪生引擎</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二屏：关于我们 (id="about") -->
+    <section id="about">
+        <div class="container glass-card">
+            <div class="badge">关于我们</div>
+            <p style="font-size:1.3rem; line-height:1.6; margin-bottom:1.5rem;"><strong>深零科模（PrismZero TechModel）</strong> 是一家聚焦底层架构的技术系统公司。我们以 <strong>网络安全</strong> 与 <strong>3D建模</strong> 为业务双核，从零构建高弹性、零信任的建模基础设施。不做浮于表面的应用层产品，只做沉在系统底层的技术底座。</p>
+            <p style="font-size:1.1rem;">公司旗下运行 <strong>PrismZeroSystem（深零系统）</strong>，作为全部技术输出的统一载体。</p>
+            
+            <!-- 联系方式区块 -->
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(100,160,255,0.2);">
+                <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+                    <span style="font-size: 1.2rem; opacity: 0.8;">📬</span>
+                    <span style="font-weight: 500; letter-spacing: 1px; color: #b0c7e9;">联系方式</span>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem 3rem;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="background: #1e3a8a; width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">📞</span>
+                        <div>
+                            <div style="font-size: 0.85rem; opacity: 0.7;">电话</div>
+                            <div style="font-weight: 500; font-size: 1.1rem;">18881319194</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="background: #1e3a8a; width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">✉️</span>
+                        <div>
+                            <div style="font-size: 0.85rem; opacity: 0.7;">邮箱</div>
+                            <div style="font-weight: 500; font-size: 1.1rem;">1396266250@qq.com</div>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 1.2rem; font-size: 0.9rem; opacity: 0.6;">技术交流 · 业务合作 · 欢迎联系</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：业务方向 (id="business") -->
+    <section id="business">
+        <div class="container">
+            <div class="badge" style="margin-bottom: 2rem;">业务方向</div>
+            <div class="grid-2">
+                <div class="glass-card">
+                    <h3 style="font-size:1.8rem; margin-bottom:1rem; color:#b8d0ff;">🔐 网络安全</h3>
+                    <ul>
+                        <li>零信任架构设计与部署</li>
+                        <li>系统级安全加固与渗透测试</li>
+                        <li>底层协议分析与漏洞挖掘</li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <h3 style="font-size:1.8rem; margin-bottom:1rem; color:#b8d0ff;">🧊 3D建模</h3>
+                    <ul>
+                        <li>高精度模型构建与仿真</li>
+                        <li>数字孪生底层引擎支持</li>
+                        <li>建模工具链的定制开发</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:2rem; opacity:0.8;">两条业务线在底层逻辑上互通：安全为建模提供可信环境，建模为安全提供可视化纵深。</p>
+        </div>
+    </section>
+
+    <!-- 第四屏：部门直达 (id="departments") - 替换了原公司架构表格 -->
+    <section id="departments">
+        <div class="container">
+            <div class="badge" style="margin-bottom: 2rem;">技术部门</div>
+            <p style="text-align:center; margin-bottom: 2rem; opacity:0.8;">深零科模下设两大技术单元，协同运转构成完整交付链路</p>
+            <div class="grid-2">
+                <!-- 海神严巴工作室 -->
+                <a href="./Haishenyanba/Haishenyb.html" class="glass-card dept-card" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔬</div>
+                    <h3 style="font-size: 1.6rem; color: #b8d0ff; margin-bottom: 0.5rem;">海神严巴工作室</h3>
+                    <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 1rem;">深零技术部 · 底层架构与安全核心</p>
+                    <span style="display: inline-block; padding: 0.3rem 1.5rem; border: 1px solid rgba(100,160,255,0.4); border-radius: 40px; font-size: 0.85rem; color: #b0c7e9;">进入部门 →</span>
+                </a>
+
+                <!-- 海神芙绘工作坊 -->
+                <a href="海神芙绘工作坊/index.html" class="glass-card dept-card" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎨</div>
+                    <h3 style="font-size: 1.6rem; color: #b8d0ff; margin-bottom: 0.5rem;">海神芙绘工作坊</h3>
+                    <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 1rem;">深零美术部 · 建模引擎与视觉呈现</p>
+                    <span style="display: inline-block; padding: 0.3rem 1.5rem; border: 1px solid rgba(100,160,255,0.4); border-radius: 40px; font-size: 0.85rem; color: #b0c7e9;">进入部门 →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第五屏：团队理念 (id="philosophy") -->
+    <section id="philosophy">
+        <div class="container">
+            <div class="badge">团队理念</div>
+            <div class="quote-block">
+                “系统的好坏，取决于底座的扎实程度。与其在别人搭好的框架上修修补补，不如从零构建一套真正可信的底层架构。”
+            </div>
+        </div>
+    </section>
+
+    <!-- 第六屏：我们在哪里 (id="location") -->
+    <section id="location">
+        <div class="container glass-card" style="text-align: center;">
+            <div class="badge">我们在哪里</div>
+            <div style="margin: 2rem 0;">
+                <span class="location-pill">📍 技术总部：四川 · 乐山</span>
+                <span class="location-pill">🏢 注册地：成都高新区（规划中）</span>
+            </div>
+            <div class="footer-tagline">深零科模 · 从零，向深</div>
+        </div>
+    </section>
+
+    <script src="PrismZeroTechModel-js.js"></script>
+</body>
+</html>

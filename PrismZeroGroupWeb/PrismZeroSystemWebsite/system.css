@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b0f17;
+    color: #ffffff;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, #13203a, #03060b);
+    z-index: -2;
+}
+
+.bg-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='rgba(100,150,255,0.08)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E");
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    z-index: 2;
+    animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #aaccff, #6d9eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.subhead {
+    font-size: 1.4rem;
+    color: #b0c7e9;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.glass-card {
+    background: rgba(20, 35, 60, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(100, 160, 255, 0.2);
+    border-radius: 36px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #1e3a8a;
+    color: white;
+    padding: 0.3rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #3b82f6;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+li::before {
+    content: "▹";
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-custom th {
+    text-align: left;
+    padding: 1rem 0.5rem;
+    font-weight: 600;
+    color: #94b9ff;
+    border-bottom: 1px solid #2a3a5c;
+}
+
+.table-custom td {
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #1f2a44;
+    vertical-align: middle;
+}
+
+.location-pill {
+    background: #0f1a2b;
+    padding: 0.6rem 1.5rem;
+    border-radius: 60px;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #2e4a7a;
+    font-size: 0.9rem;
+}
+
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 18, 30, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(100, 160, 255, 0.15);
+    padding: 0.8rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #aaccff, #6d9eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #b0c7e9;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    border-bottom-color: #3b82f6;
+}
+
+.nav-link.active-nav {
+    color: #ffffff;
+    border-bottom-color: #3b82f6;
+}
+
+/* 部门卡片 */
+.dept-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dept-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 50px -10px rgba(0, 0, 0, 0.6);
+    border-color: rgba(100, 160, 255, 0.4);
+}
+
+.dept-link {
+    display: inline-block;
+    padding: 0.3rem 1.5rem;
+    border: 1px solid rgba(100, 160, 255, 0.4);
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #b0c7e9;
+    transition: background 0.2s;
+}
+
+.dept-card:hover .dept-link {
+    background: rgba(59, 130, 246, 0.2);
+    color: #fff;
+}
+
+/* 宣言区块 */
+.footer-quote {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.quote-block {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+    border-left: 6px solid #ffd700;
+    max-width: 700px;
+    text-align: center;
+    color: #b0c7e9;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    section {
+        padding: 5rem 1.5rem 2rem;
+    }
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+    .nav-menu {
+        gap: 1rem;
+    }
+    .nav-link {
+        font-size: 0.85rem;
+    }
+    .quote-block {
+        font-size: 1.1rem;
+        padding: 2rem;
+    }
+}
+
+/* 背景水印图标 */
+.brand-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(400px, 50vw);
+    height: min(400px, 50vw);
+    background-image: url('PrismZeroGroupSigh.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.06;
+    filter: brightness(0.9) saturate(0.6);
+    z-index: 0;
+    pointer-events: none;
+    animation: watermarkBreath 6s ease-in-out infinite;
+}
+
+@keyframes watermarkBreath {
+    0%, 100% { opacity: 0.05; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.10; transform: translate(-50%, -50%) scale(1.04); }
+}
